@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: teams
+# Table name: players
 #
 #  id         :integer          not null, primary key
 #  name       :string           not null
@@ -9,5 +9,5 @@
 #  updated_at :datetime         not null
 #
 
-class Team < ActiveRecord::Base
+class Player < ActiveRecord::Base
 end
