@@ -10,4 +10,9 @@
 #
 
 class Character < ActiveRecord::Base
+  has_many :mains
+
+  has_many :players,
+  through: :mains,
+  source: :player
 end

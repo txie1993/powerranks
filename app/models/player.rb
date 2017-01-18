@@ -10,4 +10,15 @@
 #
 
 class Player < ActiveRecord::Base
+  has_many :mains
+
+  has_many :characters,
+  through: :mains,
+  source: :character
+
+  has_many :memberships
+
+  has_many :teams,
+  through: :memberships,
+  source: :team
 end

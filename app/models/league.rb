@@ -10,4 +10,9 @@
 #
 
 class League < ActiveRecord::Base
+  has_many :hostings
+
+  has_many :games,
+  through: :hostings,
+  source: :game
 end
